@@ -2,8 +2,10 @@ logicaJava\controladoraJava.class
 persistenciaDB\controladoraPersistenciaJava.class
 com\mycompany\parcialback\ReservaServlet1.class
 logicaJava\claseReservasJava_.class
+com\mycompany\parcialback\EliminarReservaServletJava.class
 persistenciaDB\exceptions\PreexistingEntityException.class
 persistenciaDB\claseReservasJavaJpaController.class
 persistenciaDB\exceptions\NonexistentEntityException.class
+com\mycompany\parcialback\ListaReservasServletJava.class
 logicaJava\claseReservasJava.class
 persistenciaDB\exceptions\IllegalOrphanException.class

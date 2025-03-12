@@ -22,6 +22,8 @@ import persistenciaDB.exceptions.NonexistentEntityException;
  */
 public class claseReservasJavaJpaController implements Serializable {
 
+    
+    //Esta va a ser nuestra conexión con la base de datos
     public claseReservasJavaJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
@@ -37,7 +39,7 @@ public class claseReservasJavaJpaController implements Serializable {
     }
 
 
-    
+    //Con este método, vamos a crear los nuevos registros con los datos traidos desde nuestro front-end
     public void create(claseReservasJava claseReservasJava) {
         EntityManager em = null;
         try {
@@ -51,7 +53,8 @@ public class claseReservasJavaJpaController implements Serializable {
             }
         }
     }
-
+    
+    
     public void edit(claseReservasJava claseReservasJava) throws NonexistentEntityException, Exception {
         EntityManager em = null;
         try {
@@ -74,7 +77,7 @@ public class claseReservasJavaJpaController implements Serializable {
             }
         }
     }
-
+    //Con este método, vamos a eliminar los registros con el id traido desde nuestro front-end
     public void destroy(int id) throws NonexistentEntityException {
         EntityManager em = null;
         try {
@@ -99,7 +102,8 @@ public class claseReservasJavaJpaController implements Serializable {
     public List<claseReservasJava> findclaseReservasJavaEntities() {
         return findclaseReservasJavaEntities(true, -1, -1);
     }
-
+    
+    //findclaseReservasJavaEntities, el cual retorna lo que se haya encontrado de dicha entidad
     public List<claseReservasJava> findclaseReservasJavaEntities(int maxResults, int firstResult) {
         return findclaseReservasJavaEntities(false, maxResults, firstResult);
     }

@@ -8,6 +8,10 @@ import javax.persistence.Id;
 
 
 @Entity
+
+//Esta es nuestra clase entidad, la tabla en la cual se van a guardar todos los datos
+//Posee un ID, los parámetros que se crearon en el front
+//Y los setters y getters para poder obtener la información de manera más fácil
 public class claseReservasJava implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -20,10 +24,12 @@ public class claseReservasJava implements Serializable {
     private int horas;
     
     
+    //Contructores pertinentes
+    
     public claseReservasJava(){
         
     }
-    
+   
     public claseReservasJava(int id, String nombre, String fecha, String espacio, int horas){
         this.id = id;
         this.nombre = nombre;
@@ -63,8 +69,6 @@ public class claseReservasJava implements Serializable {
     public void setHoras(int horas) {
         this.horas = horas;
     }
-    
-    
     
 
     public int getId() {
