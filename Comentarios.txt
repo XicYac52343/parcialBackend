@@ -1,0 +1,76 @@
+EL CÓDIGO SE ENCUENTRA COMENTADO DE MANERA MÁS CLARA
+
+Comentarios Index:
+        <%-- En este index manejamos el envio de reservas, y un botón que nos redirecciona a la lista  --%>
+        <%-- En este formulario ingresamos todos los inputs con cada tipo requerido --%>
+        <%-- Enviamos todos los datos con un button submit a nuestro servlet llamado ReservasServlet a el metodo de POST --%>
+        <%-- En este form, al dar clic en el botón, llamamos el método get del servlet ListaReservasServletJava--%>
+
+
+Comentarios Reservas.jsp:
+        <%-- En este index manejamos el envio de reservas, y un botón que nos redirecciona a la lista  --%>
+        <%-- En este formulario ingresamos todos los inputs con cada tipo requerido --%>
+        <%-- Enviamos todos los datos con un button submit a nuestro servlet llamado ReservasServlet a el metodo de POST --%>
+        <%-- En este form, al dar clic en el botón, llamamos el método get del servlet ListaReservasServletJava--%>
+
+EliminarReservaServletJava:
+    /*
+        En el método POST, vamos a rescatar el valor del input el cual pertenece al ID del usuario a eliminar
+        y llamamos el método de elimar Reserva, le pasamos como parámetro el ID del usuario y redireccionamos al index
+    */
+        //Rescatamos el valor del front        
+	//Pasamos el id al método de eliminar reserva para que se pueda lograr la eliminación
+
+ListaReservasServletJava:
+    /*
+        En el método GET, creamos una nueva lista que va a contener datos de nuestro tipo de claseResevasJava
+        
+        y llenamos nuestra lista con los datos que nos retornará el método de "traerReservas" del controlador
+    
+        y creamos una nueva sessión en la cual vamos a guardar los datos y los vamos a pasar al front
+    
+    */
+        //Creamos nuestra lista donde guardaremos las reservas traidas del back
+        //Llenamos nuestra lista con los datos retornados del método traerReservas del controlador
+        //Guardamos los datos con un nombre específico para poder llamarlos en el front
+
+ReservaServlet1:
+        /* En este método POST, rescatamos todos los datos que fueron enviados desde nuestro form en el frontend
+            Y hacemos unas validaciones para evitar problemas (Horas suficientes y fecha correcta)
+            para luego instanciar nuestra clase de java y enviar todos nuestro datos con los setters
+        
+            y llamamos nuestro controlador de java para pasar la instancia de la clase que acabamos de crear
+        */
+                //Si los datos son correctos, instanciamos la clase y guardamos los datos
+                //Pasamos los datos a el método de crearReserva que pertenece a nuestro controlador
+                //Pasamos los datos a el método de crearReserva que pertenece a nuestro controlador
+                //Recargamos la página
+                //Si los datos estan mal, nos arroja error
+
+claseReservasJava:
+	//Esta es nuestra clase entidad, la tabla en la cual se van a guardar todos los datos
+	//Posee un ID, los parámetros que se crearon en el front
+	//Y los setters y getters para poder obtener la información de manera más fácil
+    	//Contructores pertinentes
+
+controladoraJava:
+    //Esta es nuestra controladora con los 3 métodos necesarios
+    //Crear una reserva, el cual recibe un parámetro de tipo clase, y lo envia a la controladora de persistencia
+    //Traer reservas, el cual retorna el valor que haya retornado el método de traer reservas de la controladora de persistencia
+    //Eliminar una reserva, el cual recibe un parámetro de tipo entero, y lo envia a la controladora de persistencia para hacer la eliminación de la data base
+
+
+claseReservasJavaJpaController:
+    //Esta va a ser nuestra conexión con la base de datos
+    //Con este método, vamos a crear los nuevos registros con los datos traidos desde nuestro front-end    //Con este método, vamos a eliminar los registros con el id traido desde nuestro front-end
+    //Con este método, vamos a eliminar los registros con el id traido desde nuestro front-end
+    //findclaseReservasJavaEntities, el cual retorna lo que se haya encontrado de dicha entidad
+
+controladoraPersistenciaJava
+    //Esta es nuestra controladora con los 3 métodos necesarios
+    //Crear una reserva, el cual recibe un parámetro de tipo clase desde la controladora, y lo envia al JPA controller para crear el nuevo registro con el dato del parámetro
+    //Traer reservas, el cual retorna el valor que haya retornado el método de findClaseReservas... del JPA controller
+    //Eliminar una reserva, el cual recibe un parámetro de tipo entero, y lo envia al JPA controller para hacer la eliminación de la data base
+    //Es importante tener el try catch, porque no funcionará debido a que se puede generar una excepción de que no se encontró el registro o entidad buscado
+
+
